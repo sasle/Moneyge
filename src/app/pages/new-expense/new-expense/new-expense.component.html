@@ -1,1 +1,21 @@
-<p>new-expense works!</p>
+
+<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+                <form>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Nome da Despesa</label>
+                          <input type="text" [(ngModel)]='name' name="name" class="form-control"  placeholder="digite aqui o nome da despesa">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Dia do Pagamento</label>
+                          <input type="number" class="form-control" [(ngModel)]='date' name="date"  placeholder="digite aqui o dia de pagamento da despesa" min="1" max="31">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Valor</label>
+                          <input type="number" class="form-control" [(ngModel)]='value' name="value"  placeholder="digite aqui o valor do boleto">
+                        </div>
+                        <button type="button" class="btn btn-danger float-left" routerLink="/">Cancelar</button>
+                        <button type="submit" class="btn btn-primary float-right" (click) = "clique()"> Adicionar</button>   
+                      </form>
+        </div>
+
