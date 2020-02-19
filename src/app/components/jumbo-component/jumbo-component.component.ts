@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JumboComponentComponent implements OnInit {
 
+  amt = localStorage.getItem("Amount");
+  plural = "despesas registradas"
   constructor() { }
 
   ngOnInit() {
+    if(parseInt(this.amt)==1){
+      this.plural = "despesa registrada"
+    }
   }
 
 }

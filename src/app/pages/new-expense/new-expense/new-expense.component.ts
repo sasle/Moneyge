@@ -9,16 +9,18 @@ export class NewExpenseComponent implements OnInit {
   name;
   date;
   value;
+  amount = 0;
   constructor() { }
   
   ngOnInit() {
-    
   }
 
   clique(searchValue) {
     localStorage.setItem("Name", this.name);
       localStorage.setItem("Date", this.date);
       localStorage.setItem("Value", this.value);
+      this.amount++;
+      localStorage.setItem("Amount", this.amount.toString());
       alert("Registrado com sucesso!")
   }
 }
