@@ -4,6 +4,10 @@ body, h1, h2, h3, h4, h5, h6, a, p, span, input, button, li {
     font-family: 'Open Sans', sans-serif;
 }
 
+body{
+    background-color:#00e350!important;
+}
+
 #bar{
     background-color:#00e350;
 }
