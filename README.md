@@ -1,5 +1,7 @@
 # Moneyge
 
+**Just a P.S, I will be committing as "Alexandre Carvalho Santos" rather than my normal GitHub account ("sasle"), since this is my job account and I cannot logout of it. 😅**
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server
