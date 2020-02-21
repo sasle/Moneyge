@@ -1,26 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+interface Expense {
+  name:String,
+  date: number,
+  value: number,
+}
+
 
 @Component({
   selector: 'app-new-expense',
   templateUrl: './new-expense.component.html',
   styleUrls: ['./new-expense.component.css']
 })
+
+
 export class NewExpenseComponent implements OnInit {
-  name;
-  date;
-  value;
-  amount = 0;
+  @Input() name: string;
+  @Input() date: number;
+  @Input() value: number;
+  // amount; -> aqui vou pegar direto do .length do vetor que vier do backend.
+  expense: Expense = {
+    name: this.name,
+    date: this.date,
+    value: this.value
+  };
+
   constructor() { }
-  
   ngOnInit() {
   }
 
-  clique(searchValue) {
-    localStorage.setItem("Name", this.name);
-      localStorage.setItem("Date", this.date);
-      localStorage.setItem("Value", this.value);
-      this.amount++;
-      localStorage.setItem("Amount", this.amount.toString());
+  clique(searchValue:Expense) {
+    this.expense.name = this.name;
+    this.expense.date = this.date;
+    this.expense.value = this.value;
       alert("Registrado com sucesso!")
   }
 }
