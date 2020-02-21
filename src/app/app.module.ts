@@ -9,6 +9,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { NewExpenseComponent } from './pages/new-expense/new-expense/new-expense.component';
 import { ListExpenseComponent } from './pages/list-expense/list-expense/list-expense.component';
 import { CardComponent } from './components/cards/card/card.component';
+import { HeaderNewComponent } from './components/header-new/header-new/header-new.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CardComponent } from './components/cards/card/card.component';
     MainPageComponent,
     NewExpenseComponent,
     ListExpenseComponent,
-    CardComponent
+    CardComponent,
+    HeaderNewComponent
   ],
   imports: [
     BrowserModule,
