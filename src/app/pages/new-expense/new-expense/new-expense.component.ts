@@ -29,10 +29,11 @@ export class NewExpenseComponent implements OnInit {
   ngOnInit() {
   }
 
-  clique(searchValue:Expense) {
+  clique() {
     this.expense.name = this.name;
     this.expense.date = this.date;
     this.expense.value = this.value;
+    console.log(this.expense);
       alert("Registrado com sucesso!")
   }
 }

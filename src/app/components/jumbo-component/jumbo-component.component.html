@@ -12,7 +12,8 @@
         <div class="col sm-12 col-md-5">
           <app-card></app-card>
         </div>
-        <span class="col-md-1" aria-hidden="true"><i class="fas fa-9x fa-chevron-right"></i></span>
+        <span *ngIf="!isMobile" class="col-md-1" aria-hidden="true"><i class="fas fa-3x fa-chevron-right" style="color:white;margin-top: 150px;"></i></span>
+        <span *ngIf="isMobile" class="col-md-1" aria-hidden="true"><i class="fas fa-3x fa-chevron-down" style="color:white"></i></span>
       </div>
     
   </div>
