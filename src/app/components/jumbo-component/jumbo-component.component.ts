@@ -7,14 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JumboComponentComponent implements OnInit {
 
-  isMobile = false;
-  plural = "despesas registradas"
+  plural = 'despesas registradas';
+  length = 0;
   constructor() { }
 
   ngOnInit() {
-    if(window.screen.width < 768) {
-      this.isMobile = true;
+    if (this.length === 1) {
+      this.plural = 'despesa registrada';
     }
   }
-
 }

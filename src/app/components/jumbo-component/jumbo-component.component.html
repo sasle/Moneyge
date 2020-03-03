@@ -1,20 +1,22 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4 pt-3">{{amt}} {{plural}}</h1>
-    <h3 class="lead">Parece que você ainda não tem despesas registradas!</h3>
-    <h6>Clique
+    <h1 class="display-4 pt-3" *ngIf="length>=1">{{length}} {{plural}}</h1>
+    <h1 class="display-5 pt-3" *ngIf="length===0">Parece que você ainda não tem despesas registradas!</h1>
+    <h6 *ngIf="length===0">Clique
       <a href="/add" class="border-bottom">aqui</a> para registrar uma nova despesa.</h6>
 
-      <div class="row">
-        <div class="col sm-12 col-md-6">
+      <div class="row pt-3">
+        <div class="col sm-12 col-md-4">
           <app-card></app-card>
         </div>
-        <div class="col sm-12 col-md-5">
+        <div class="col sm-12 col-md-4">
           <app-card></app-card>
         </div>
-        <span *ngIf="!isMobile" class="col-md-1" aria-hidden="true"><i class="fas fa-3x fa-chevron-right" style="color:white;margin-top: 150px;"></i></span>
-        <span *ngIf="isMobile" class="col-md-1" aria-hidden="true"><i class="fas fa-3x fa-chevron-down" style="color:white"></i></span>
+        <div class="col sm-12 col-md-4">
+          <app-card></app-card>
+        </div>
       </div>
-    
+      <span aria-hidden="true" style="color:white">Ver mais</span>
+    </div>
+    <span aria-hidden="true" style="margin: 0 auto;"><i class="fas fa-3x fa-chevron-down" style="color:white;"></i></span>
   </div>
-</div>

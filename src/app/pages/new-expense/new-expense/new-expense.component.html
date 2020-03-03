@@ -12,10 +12,10 @@
                         </div>
                         <div class="form-group">
                           <label for="exampleFormControlInput1">Valor</label>
-                          <input type="number" class="form-control" [(ngModel)]='value' name="value"  placeholder="digite aqui o valor do boleto">
+                          <input type="number" class="form-control" [(ngModel)]='value' name="value"  placeholder="digite aqui o valor do boleto" min="1">
                         </div>
-                        <button type="button" class="btn btn-danger float-left" routerLink="/">Cancelar</button>
-                        <button type="submit" class="btn btn-primary float-right" (click) = "clique()" routerLink = "/"> Adicionar</button>   
+                        <button type="button" class="btn btn-outline-danger float-left" routerLink="/">Cancelar</button>
+                        <button type="submit" class="btn btn-primary float-right" (click) = "clique()" routerLink = "/"> Adicionar</button>
                       </form>
         </div>
 

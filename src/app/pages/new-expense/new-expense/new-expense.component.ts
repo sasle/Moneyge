@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 interface Expense {
-  name:String,
-  date: number,
-  value: number,
+  name: string;
+  date: number;
+  value: number;
 }
 
 
@@ -25,15 +25,19 @@ export class NewExpenseComponent implements OnInit {
     value: this.value
   };
 
+  expenses: Expense[] = [];
+
   constructor() { }
-  ngOnInit() {
-  }
+
+  ngOnInit() { }
 
   clique() {
     this.expense.name = this.name;
     this.expense.date = this.date;
     this.expense.value = this.value;
+    this.expenses.push(this.expense);
     console.log(this.expense);
-      alert("Registrado com sucesso!")
+    console.log(this.expenses);
+    alert('Registrado com sucesso!');
   }
 }
