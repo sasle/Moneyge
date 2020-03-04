@@ -10,6 +10,8 @@ import { NewExpenseComponent } from './pages/new-expense/new-expense/new-expense
 import { ListExpenseComponent } from './pages/list-expense/list-expense/list-expense.component';
 import { CardComponent } from './components/cards/card/card.component';
 import { HeaderNewComponent } from './components/header-new/header-new/header-new.component';
+import { LoginPageComponent } from './pages/login-page/login-page/login-page.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page/signup-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HeaderNewComponent } from './components/header-new/header-new/header-ne
     NewExpenseComponent,
     ListExpenseComponent,
     CardComponent,
-    HeaderNewComponent
+    HeaderNewComponent,
+    LoginPageComponent,
+    SignupPageComponent
   ],
   imports: [
     BrowserModule,
